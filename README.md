@@ -2,7 +2,7 @@
 
 # Cotizador de Seguros para el Automóvil
 
-Aplicación web te permite calcular el seguro de tu coche en función de la marca, año del vehículo y plan que quieras contratar. [Cotizador de Seguros 🧡](https://sleepy-meitner-329088.netlify.app/).
+Aplicación web te permite calcular el seguro de tu coche en función de la marca, año del vehículo y plan que quieras contratar. [Cotizador de Seguros 🚘](https://sleepy-meitner-329088.netlify.app/).
 
 ## Sitio Web
 ---
