@@ -94,9 +94,7 @@ const Formulario = ({guardarResumen, guadarCargando}) => {
         //Por cada año hay que restar 3% del valor
         resultado -= ((diferencia * 3) *  resultado) / 100;
 
-        //Americano 15%
-        //Asiatio 5%
-        //Europeo 30%
+        //porcentaje por marca
         resultado = calcularMarca(marca) * resultado;
 
         //Basico aumenta 20%
@@ -135,9 +133,19 @@ const Formulario = ({guardarResumen, guadarCargando}) => {
                     onChange={obtenerInformacion}
                 >
                     <option value="">--Seleccione--</option>
-                    <option value="americano">Americano</option>
-                    <option value="europe">Europe</option>
-                    <option value="asiatico">Asiático</option>
+                    <option value="alfa">Alfa Romeo</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="ford">Ford</option>
+                    <option value="hyundai">Hyundai</option>
+                    <option value="mercedes">Mercedes</option> 
+                    <option value="nissan">Nissan</option>
+                    <option value="opel">Opel</option>
+                    <option value="peugeot">Peugeot</option>  
+                    <option value="renault">Renault</option> 
+                    <option value="seat">Seat</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="vw">Volkswagen</option>             
                 </Select>
             </Campo>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
+import Logo from './Logo';
 
 const ContenedorHeader = styled.header`
     background-color: #26C6DA;
@@ -9,9 +10,10 @@ const ContenedorHeader = styled.header`
     color: #FFF;
 `;
 
-const TextoHeader = styled.h1`
-    font-size: 2rem;
-    margin: 0;
+const TextoHeader = styled.h2`
+    font-size: 1rem;
+    margin:0;
+    margin-bottom:10px;
     font-family: 'Slabo 27px', serif;
     text-align: center;
 
@@ -20,6 +22,7 @@ const TextoHeader = styled.h1`
 const Header = ({titulo}) => {
     return (
         <ContenedorHeader>
+            <Logo />           
             <TextoHeader>{titulo}</TextoHeader>
         </ContenedorHeader>
     );

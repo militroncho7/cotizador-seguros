@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {Fragment, useState} from 'react';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
 import Resumen from './components/Resumen';
 import Resultado from './components/Resultado';
 import Spinner from './components/Spinner';
+import Footer from './components/Footer';
 
 import styled from '@emotion/styled';
 
@@ -35,30 +36,34 @@ function App() {
   const { cotizacion, datos } = resumen;
 
   return (
-    <Contenedor>
-      <Header titulo='Cotizador de seguros'/>
+    <Fragment>
+      <Contenedor>
+        <Header titulo='¡Tu Cotizador de seguros!'/>
 
-      <ContenedorFormulario>
-        <Formulario
-          guardarResumen={guardarResumen}
-          guadarCargando={guadarCargando}
-        />
+        <ContenedorFormulario>
+          <Formulario
+            guardarResumen={guardarResumen}
+            guadarCargando={guadarCargando}
+          />
 
-        { cargando ? <Spinner /> : null}
-        
+          { cargando ? <Spinner /> : null}
+          
 
-        <Resumen
-          datos={datos}
-        />
+          <Resumen
+            datos={datos}
+          />
 
-        {!cargando ?
-          <Resultado
-            cotizacion={cotizacion}
-          /> : null
-        }
-        
-      </ContenedorFormulario>
-    </Contenedor>    
+          {!cargando ?
+            <Resultado
+              cotizacion={cotizacion}
+            /> : null
+          }
+          
+        </ContenedorFormulario>
+      </Contenedor>    
+
+      <Footer />
+    </Fragment>
   );
 }
 
